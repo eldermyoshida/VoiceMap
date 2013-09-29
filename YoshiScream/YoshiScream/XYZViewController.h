@@ -9,8 +9,7 @@
 #import <UIKit/UIViewController.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-#import "SpeechConfig.h"
-#import "SpeechAuth.h"
+#import "ATTSpeechKit.h"
 
 
 @interface XYZViewController : UIViewController <ATTSpeechServiceDelegate>

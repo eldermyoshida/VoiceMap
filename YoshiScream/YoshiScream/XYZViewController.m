@@ -12,6 +12,8 @@
 
 
 #import "XYZViewController.h"
+#import "SpeechConfig.h"
+#import "SpeechAuth.h"
 
 @interface XYZViewController ()
 - (void) speechAuthFailed: (NSError*) error;
