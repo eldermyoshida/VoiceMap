@@ -6,7 +6,6 @@
 // For more information contact developer.support@att.com http://developer.att.com
 
 #import "SpeechAuth.h"
-#import "ATTSpeechKit.h"
 
 typedef enum
 {

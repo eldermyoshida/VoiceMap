@@ -6,6 +6,8 @@
 // For more information contact developer.support@att.com http://developer.att.com
 
 #import <Foundation/NSObject.h>
+#import "ATTSpeechKit.h"
+
 
 @class NSString, NSError;
 

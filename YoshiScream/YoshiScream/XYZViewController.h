@@ -7,14 +7,19 @@
 //
 
 #import <UIKit/UIViewController.h>
+#import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-#import "ATTSpeechKit.h"
+#import "SpeechConfig.h"
+#import "SpeechAuth.h"
 
 
 @interface XYZViewController : UIViewController <ATTSpeechServiceDelegate>
+
 @property (retain, nonatomic) IBOutlet UIButton *talkButton;
 @property (retain, nonatomic) IBOutlet UILabel *textLabel;
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
+
+
 - (void)yoshiFunction:(MKMapView *)mapView and: (NSString *)query;
 
     // Initialize SpeechKit for this app.

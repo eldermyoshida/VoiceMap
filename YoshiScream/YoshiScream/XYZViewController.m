@@ -10,18 +10,13 @@
     // For more information contact developer.support@att.com http://developer.att.com
     //
 
-#import "XYZViewController.h"
-#import <CoreLocation/CoreLocation.h>
-#import <MapKit/MapKit.h>
-#import "ATTSpeechKit.h"
-#import "SpeechConfig.h"
-#import "SpeechAuth.h"
 
-#define METERS_PER_MILE 1609.344
+#import "XYZViewController.h"
 
 @interface XYZViewController ()
 - (void) speechAuthFailed: (NSError*) error;
 @end
+
 @implementation XYZViewController
 
 @synthesize textLabel;
@@ -56,7 +51,7 @@
     speechService.showUI = YES;
     
         // Choose the speech recognition package.
-    speechService.speechContext = @"BusinessSearch";
+    speechService.speechContext = @"WebSearch";
     
         // Enable the Speex codec, which provides better speech recognition accuracy.
     speechService.audioFormat = ATTSKAudioFormatSpeex_WB;
@@ -80,83 +75,6 @@
         // Wake the audio components so there is minimal delay on the first request.
     [speechService prepare];
 }
-
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-        // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-        // Dispose of any resources that can be recreated.
-}
-
-
-- (void)viewWillAppear:(BOOL)animated {
-        // 1
-    CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 36.001551;
-    zoomLocation.longitude= -78.939573;
-    
-        // 2
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 10*METERS_PER_MILE, 10*METERS_PER_MILE);
-    
-        // 3
-    [mapView setRegion:viewRegion animated:YES];
-    [self yoshiFunction:mapView and: @"Nasher"];
-}
-
-- (void)yoshiFunction:(MKMapView *)localMapView and:(NSString *) query {
-        // if on slow network, it's useful to keep track of the previous
-        // search, and cancel it if it still exists
-    
-        // create new search request
-    
-    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
-    request.naturalLanguageQuery = query;
-    request.region = mapView.region;
-    
-        // initiate new search
-    
-    MKLocalSearch *localSearch = [[MKLocalSearch alloc] initWithRequest:request];
-    [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
-        if(!error){
-            NSMutableArray *annotations = [NSMutableArray array];
-            
-            [response.mapItems enumerateObjectsUsingBlock:^(MKMapItem *item, NSUInteger idx, BOOL *stop) {
-                
-                    // if we already have an annotation for this MKMapItem,
-                    // just return because you don't have to add it again
-                
-                for (id<MKAnnotation>annotation in localMapView.annotations)
-                    {
-                    if (annotation.coordinate.latitude == item.placemark.coordinate.latitude &&
-                        annotation.coordinate.longitude == item.placemark.coordinate.longitude)
-                        {
-                        return;
-                        }
-                    }
-                
-                    // otherwise, add it to our list of new annotations
-                    // ideally, I'd suggest a custom annotation or MKPinAnnotation, but I want to keep this example simple
-                
-                [annotations addObject:item.placemark];
-            }];
-            
-            [localMapView addAnnotations:annotations];
-        }
-        else {
-            NSLog(@"%@",[error localizedDescription]);
-        }
-    }];
-        // update our "previous" search, so we can cancel it if necessary
-}
-
-
-
 
 #pragma mark -
 #pragma mark UI
@@ -197,6 +115,13 @@
     NSString* escapedTerm =
     [recognizedText stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
     [self yoshiFunction:mapView and: escapedTerm];
+    /*
+    NSString* urlString =
+    [NSString stringWithFormat: @"http://en.m.wikipedia.org/w/index.php?search=%@", escapedTerm];
+    NSURL* url = [NSURL URLWithString: urlString];
+    NSURLRequest* request = [NSURLRequest requestWithURL: url];
+    [self.webView loadRequest:request];
+     */
 }
 
 #pragma mark -
@@ -273,5 +198,77 @@
 }
 
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+        // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+        // Dispose of any resources that can be recreated.
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+        // 1
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = 36.001551;
+    zoomLocation.longitude= -78.939573;
+    
+        // 2
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 10*1609.344, 10*1609.344);
+    
+        // 3
+    [mapView setRegion:viewRegion animated:YES];
+    [self yoshiFunction:mapView and: @"Nasher"];
+}
+
+- (void)yoshiFunction:(MKMapView *)localMapView and:(NSString *) query {
+        // if on slow network, it's useful to keep track of the previous
+        // search, and cancel it if it still exists
+    
+        // create new search request
+    
+    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
+    request.naturalLanguageQuery = query;
+    request.region = mapView.region;
+    
+        // initiate new search
+    
+    MKLocalSearch *localSearch = [[MKLocalSearch alloc] initWithRequest:request];
+    [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
+        if(!error){
+            NSMutableArray *annotations = [NSMutableArray array];
+            
+            [response.mapItems enumerateObjectsUsingBlock:^(MKMapItem *item, NSUInteger idx, BOOL *stop) {
+                
+                    // if we already have an annotation for this MKMapItem,
+                    // just return because you don't have to add it again
+                
+                for (id<MKAnnotation>annotation in localMapView.annotations)
+                    {
+                    if (annotation.coordinate.latitude == item.placemark.coordinate.latitude &&
+                        annotation.coordinate.longitude == item.placemark.coordinate.longitude)
+                        {
+                        return;
+                        }
+                    }
+                
+                    // otherwise, add it to our list of new annotations
+                    // ideally, I'd suggest a custom annotation or MKPinAnnotation, but I want to keep this example simple
+                
+                [annotations addObject:item.placemark];
+            }];
+            
+            [localMapView addAnnotations:annotations];
+        }
+        else {
+            NSLog(@"%@",[error localizedDescription]);
+        }
+    }];
+        // update our "previous" search, so we can cancel it if necessary
+}
 
 @end
