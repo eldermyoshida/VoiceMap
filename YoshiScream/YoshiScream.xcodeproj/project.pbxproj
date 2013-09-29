@@ -22,6 +22,7 @@
 		945EF96F17F7D66D00B5445F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF94E17F7D66C00B5445F /* UIKit.framework */; };
 		945EF97717F7D66D00B5445F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 945EF97517F7D66D00B5445F /* InfoPlist.strings */; };
 		945EF97917F7D66D00B5445F /* YoshiScreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF97817F7D66D00B5445F /* YoshiScreamTests.m */; };
+		945EF98617F7D85D00B5445F /* ATTSpeechKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF98417F7D85D00B5445F /* ATTSpeechKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		945EF97417F7D66D00B5445F /* YoshiScreamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YoshiScreamTests-Info.plist"; sourceTree = "<group>"; };
 		945EF97617F7D66D00B5445F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		945EF97817F7D66D00B5445F /* YoshiScreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoshiScreamTests.m; sourceTree = "<group>"; };
+		945EF98417F7D85D00B5445F /* ATTSpeechKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = ATTSpeechKit.a; sourceTree = "<group>"; };
+		945EF98517F7D85D00B5445F /* ATTSpeechKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTSpeechKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 			files = (
 				945EF94D17F7D66C00B5445F /* CoreGraphics.framework in Frameworks */,
 				945EF94F17F7D66C00B5445F /* UIKit.framework in Frameworks */,
+				945EF98617F7D85D00B5445F /* ATTSpeechKit.a in Frameworks */,
 				945EF94B17F7D66C00B5445F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +88,7 @@
 		945EF93E17F7D66C00B5445F = {
 			isa = PBXGroup;
 			children = (
+				945EF98217F7D6EA00B5445F /* ATTSpeechKit */,
 				945EF95017F7D66C00B5445F /* YoshiScream */,
 				945EF97217F7D66D00B5445F /* YoshiScreamTests */,
 				945EF94917F7D66C00B5445F /* Frameworks */,
@@ -153,6 +158,15 @@
 				945EF97517F7D66D00B5445F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		945EF98217F7D6EA00B5445F /* ATTSpeechKit */ = {
+			isa = PBXGroup;
+			children = (
+				945EF98417F7D85D00B5445F /* ATTSpeechKit.a */,
+				945EF98517F7D85D00B5445F /* ATTSpeechKit.h */,
+			);
+			name = ATTSpeechKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +410,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YoshiScream/YoshiScream-Prefix.pch";
 				INFOPLIST_FILE = "YoshiScream/YoshiScream-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Yoshida/Developer/YoshiScream/YoshiScream,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -409,6 +427,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YoshiScream/YoshiScream-Prefix.pch";
 				INFOPLIST_FILE = "YoshiScream/YoshiScream-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Yoshida/Developer/YoshiScream/YoshiScream,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
