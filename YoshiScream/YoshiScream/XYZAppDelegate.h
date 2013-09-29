@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class XYZViewController;
+
 
 @interface XYZAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) UIWindow *window;
+@property (nonatomic, retain) IBOutlet XYZViewController *viewController;
 
 @end
+

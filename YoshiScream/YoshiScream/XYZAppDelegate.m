@@ -7,12 +7,27 @@
 //
 
 #import "XYZAppDelegate.h"
+#import "XYZViewController.h"
+
 
 @implementation XYZAppDelegate
+@synthesize window;
+@synthesize viewController;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+
+#pragma mark -
+#pragma mark Application lifecycle
+
+
+
+- (BOOL) application: (UIApplication*) application didFinishLaunchingWithOptions: (NSDictionary*) launchOptions
 {
-    // Override point for customization after application launch.
+        // Override point for customization after application launch.
+    
+        // Hook up the UI from Interface Builder.
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							
@@ -33,14 +48,22 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
+- (void) applicationDidBecomeActive: (UIApplication*) application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        // Since the app has come to the foreground, (re-)initialize SpeechKit.
+    [viewController prepareSpeech];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void) dealloc
+{
+    [viewController release];
+    [window release];
+    [super dealloc];
 }
 
 @end

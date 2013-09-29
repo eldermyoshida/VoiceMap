@@ -13,8 +13,6 @@
 		945EF95517F7D66C00B5445F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 945EF95317F7D66C00B5445F /* InfoPlist.strings */; };
 		945EF95717F7D66C00B5445F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF95617F7D66C00B5445F /* main.m */; };
 		945EF95B17F7D66D00B5445F /* XYZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF95A17F7D66D00B5445F /* XYZAppDelegate.m */; };
-		945EF95E17F7D66D00B5445F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945EF95C17F7D66D00B5445F /* Main_iPhone.storyboard */; };
-		945EF96117F7D66D00B5445F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945EF95F17F7D66D00B5445F /* Main_iPad.storyboard */; };
 		945EF96417F7D66D00B5445F /* XYZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF96317F7D66D00B5445F /* XYZViewController.m */; };
 		945EF96617F7D66D00B5445F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945EF96517F7D66D00B5445F /* Images.xcassets */; };
 		945EF96D17F7D66D00B5445F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF96C17F7D66D00B5445F /* XCTest.framework */; };
@@ -22,9 +20,15 @@
 		945EF96F17F7D66D00B5445F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF94E17F7D66C00B5445F /* UIKit.framework */; };
 		945EF97717F7D66D00B5445F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 945EF97517F7D66D00B5445F /* InfoPlist.strings */; };
 		945EF97917F7D66D00B5445F /* YoshiScreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF97817F7D66D00B5445F /* YoshiScreamTests.m */; };
-		945EF98617F7D85D00B5445F /* ATTSpeechKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF98417F7D85D00B5445F /* ATTSpeechKit.a */; };
 		945EF98817F7DA9800B5445F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF98717F7DA9800B5445F /* MapKit.framework */; };
 		945EF98A17F7DDE100B5445F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF98917F7DDE000B5445F /* CoreLocation.framework */; };
+		945EF99A17F895E600B5445F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF99817F895E600B5445F /* AVFoundation.framework */; };
+		945EF99B17F895E700B5445F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF99917F895E600B5445F /* Security.framework */; };
+		945EF9A917F8A21000B5445F /* SpeechAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF9A617F8A21000B5445F /* SpeechAuth.m */; };
+		945EF9AA17F8A21000B5445F /* SpeechConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 945EF9A817F8A21000B5445F /* SpeechConfig.m */; };
+		945EF9B317F8A95A00B5445F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945EF95C17F7D66D00B5445F /* Main_iPhone.storyboard */; };
+		945EF9B417F8A95A00B5445F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945EF95F17F7D66D00B5445F /* Main_iPad.storyboard */; };
+		945EF9D317F8AB6800B5445F /* ATTSpeechKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 945EF9BE17F8AB5B00B5445F /* ATTSpeechKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +62,33 @@
 		945EF97417F7D66D00B5445F /* YoshiScreamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YoshiScreamTests-Info.plist"; sourceTree = "<group>"; };
 		945EF97617F7D66D00B5445F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		945EF97817F7D66D00B5445F /* YoshiScreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoshiScreamTests.m; sourceTree = "<group>"; };
-		945EF98417F7D85D00B5445F /* ATTSpeechKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = ATTSpeechKit.a; sourceTree = "<group>"; };
-		945EF98517F7D85D00B5445F /* ATTSpeechKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTSpeechKit.h; sourceTree = "<group>"; };
 		945EF98717F7DA9800B5445F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		945EF98917F7DDE000B5445F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		945EF99817F895E600B5445F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		945EF99917F895E600B5445F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		945EF9A517F8A21000B5445F /* SpeechAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeechAuth.h; path = YoshiScream/Model/SpeechAuth.h; sourceTree = "<group>"; };
+		945EF9A617F8A21000B5445F /* SpeechAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeechAuth.m; path = YoshiScream/Model/SpeechAuth.m; sourceTree = "<group>"; };
+		945EF9A717F8A21000B5445F /* SpeechConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpeechConfig.h; path = YoshiScream/Model/SpeechConfig.h; sourceTree = "<group>"; };
+		945EF9A817F8A21000B5445F /* SpeechConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpeechConfig.m; path = YoshiScream/Model/SpeechConfig.m; sourceTree = "<group>"; };
+		945EF9B917F8AAB100B5445F /* ATTSpeechKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = ATTSpeechKit.a; path = YoshiScream/ATTSpeechKit/ATTSpeechKit.a; sourceTree = "<group>"; };
+		945EF9BA17F8AAB100B5445F /* ATTSpeechKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATTSpeechKit.h; path = YoshiScream/ATTSpeechKit/ATTSpeechKit.h; sourceTree = "<group>"; };
+		945EF9BE17F8AB5B00B5445F /* ATTSpeechKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = ATTSpeechKit.a; sourceTree = "<group>"; };
+		945EF9BF17F8AB5B00B5445F /* ATTSpeechKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATTSpeechKit.h; sourceTree = "<group>"; };
+		945EF9C117F8AB5B00B5445F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		945EF9C317F8AB5B00B5445F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		945EF9C517F8AB5B00B5445F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		945EF9C617F8AB5B00B5445F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		945EF9C717F8AB5B00B5445F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		945EF9C917F8AB5B00B5445F /* SpeechAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeechAuth.h; sourceTree = "<group>"; };
+		945EF9CA17F8AB5B00B5445F /* SpeechAuth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeechAuth.m; sourceTree = "<group>"; };
+		945EF9CB17F8AB5B00B5445F /* SpeechConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeechConfig.h; sourceTree = "<group>"; };
+		945EF9CC17F8AB5B00B5445F /* SpeechConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeechConfig.m; sourceTree = "<group>"; };
+		945EF9CD17F8AB5B00B5445F /* XYZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZAppDelegate.h; sourceTree = "<group>"; };
+		945EF9CE17F8AB5B00B5445F /* XYZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZAppDelegate.m; sourceTree = "<group>"; };
+		945EF9CF17F8AB5B00B5445F /* XYZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZViewController.h; sourceTree = "<group>"; };
+		945EF9D017F8AB5B00B5445F /* XYZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZViewController.m; sourceTree = "<group>"; };
+		945EF9D117F8AB5B00B5445F /* YoshiScream-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YoshiScream-Info.plist"; sourceTree = "<group>"; };
+		945EF9D217F8AB5B00B5445F /* YoshiScream-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YoshiScream-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +96,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945EF9D317F8AB6800B5445F /* ATTSpeechKit.a in Frameworks */,
 				945EF98A17F7DDE100B5445F /* CoreLocation.framework in Frameworks */,
 				945EF98817F7DA9800B5445F /* MapKit.framework in Frameworks */,
 				945EF94D17F7D66C00B5445F /* CoreGraphics.framework in Frameworks */,
 				945EF94F17F7D66C00B5445F /* UIKit.framework in Frameworks */,
-				945EF98617F7D85D00B5445F /* ATTSpeechKit.a in Frameworks */,
+				945EF99A17F895E600B5445F /* AVFoundation.framework in Frameworks */,
+				945EF99B17F895E700B5445F /* Security.framework in Frameworks */,
 				945EF94B17F7D66C00B5445F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,11 +123,12 @@
 		945EF93E17F7D66C00B5445F = {
 			isa = PBXGroup;
 			children = (
-				945EF98217F7D6EA00B5445F /* ATTSpeechKit */,
+				945EF94817F7D66C00B5445F /* Products */,
+				945EF98B17F895A800B5445F /* Model */,
 				945EF95017F7D66C00B5445F /* YoshiScream */,
 				945EF97217F7D66D00B5445F /* YoshiScreamTests */,
+				945EF9B817F8AAA600B5445F /* ATTSpeechKit */,
 				945EF94917F7D66C00B5445F /* Frameworks */,
-				945EF94817F7D66C00B5445F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +144,9 @@
 		945EF94917F7D66C00B5445F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				945EF9BC17F8AB5B00B5445F /* YoshiScream */,
+				945EF99817F895E600B5445F /* AVFoundation.framework */,
+				945EF99917F895E600B5445F /* Security.framework */,
 				945EF98917F7DDE000B5445F /* CoreLocation.framework */,
 				945EF98717F7DA9800B5445F /* MapKit.framework */,
 				945EF94A17F7D66C00B5445F /* Foundation.framework */,
@@ -168,13 +201,64 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		945EF98217F7D6EA00B5445F /* ATTSpeechKit */ = {
+		945EF98B17F895A800B5445F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				945EF98417F7D85D00B5445F /* ATTSpeechKit.a */,
-				945EF98517F7D85D00B5445F /* ATTSpeechKit.h */,
+				945EF9A517F8A21000B5445F /* SpeechAuth.h */,
+				945EF9A617F8A21000B5445F /* SpeechAuth.m */,
+				945EF9A717F8A21000B5445F /* SpeechConfig.h */,
+				945EF9A817F8A21000B5445F /* SpeechConfig.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		945EF9B817F8AAA600B5445F /* ATTSpeechKit */ = {
+			isa = PBXGroup;
+			children = (
+				945EF9B917F8AAB100B5445F /* ATTSpeechKit.a */,
+				945EF9BA17F8AAB100B5445F /* ATTSpeechKit.h */,
 			);
 			name = ATTSpeechKit;
+			sourceTree = "<group>";
+		};
+		945EF9BC17F8AB5B00B5445F /* YoshiScream */ = {
+			isa = PBXGroup;
+			children = (
+				945EF9BD17F8AB5B00B5445F /* ATTSpeechKit */,
+				945EF9C017F8AB5B00B5445F /* Main_iPad.storyboard */,
+				945EF9C217F8AB5B00B5445F /* Main_iPhone.storyboard */,
+				945EF9C417F8AB5B00B5445F /* InfoPlist.strings */,
+				945EF9C617F8AB5B00B5445F /* Images.xcassets */,
+				945EF9C717F8AB5B00B5445F /* main.m */,
+				945EF9C817F8AB5B00B5445F /* Model */,
+				945EF9CD17F8AB5B00B5445F /* XYZAppDelegate.h */,
+				945EF9CE17F8AB5B00B5445F /* XYZAppDelegate.m */,
+				945EF9CF17F8AB5B00B5445F /* XYZViewController.h */,
+				945EF9D017F8AB5B00B5445F /* XYZViewController.m */,
+				945EF9D117F8AB5B00B5445F /* YoshiScream-Info.plist */,
+				945EF9D217F8AB5B00B5445F /* YoshiScream-Prefix.pch */,
+			);
+			path = YoshiScream;
+			sourceTree = "<group>";
+		};
+		945EF9BD17F8AB5B00B5445F /* ATTSpeechKit */ = {
+			isa = PBXGroup;
+			children = (
+				945EF9BE17F8AB5B00B5445F /* ATTSpeechKit.a */,
+				945EF9BF17F8AB5B00B5445F /* ATTSpeechKit.h */,
+			);
+			path = ATTSpeechKit;
+			sourceTree = "<group>";
+		};
+		945EF9C817F8AB5B00B5445F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				945EF9C917F8AB5B00B5445F /* SpeechAuth.h */,
+				945EF9CA17F8AB5B00B5445F /* SpeechAuth.m */,
+				945EF9CB17F8AB5B00B5445F /* SpeechConfig.h */,
+				945EF9CC17F8AB5B00B5445F /* SpeechConfig.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				945EF96117F7D66D00B5445F /* Main_iPad.storyboard in Resources */,
+				945EF9B317F8A95A00B5445F /* Main_iPhone.storyboard in Resources */,
+				945EF9B417F8A95A00B5445F /* Main_iPad.storyboard in Resources */,
 				945EF96617F7D66D00B5445F /* Images.xcassets in Resources */,
-				945EF95E17F7D66D00B5445F /* Main_iPhone.storyboard in Resources */,
 				945EF95517F7D66C00B5445F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,9 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945EF95717F7D66C00B5445F /* main.m in Sources */,
 				945EF96417F7D66D00B5445F /* XYZViewController.m in Sources */,
 				945EF95B17F7D66D00B5445F /* XYZAppDelegate.m in Sources */,
-				945EF95717F7D66C00B5445F /* main.m in Sources */,
+				945EF9A917F8A21000B5445F /* SpeechAuth.m in Sources */,
+				945EF9AA17F8A21000B5445F /* SpeechConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +415,30 @@
 			isa = PBXVariantGroup;
 			children = (
 				945EF97617F7D66D00B5445F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		945EF9C017F8AB5B00B5445F /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				945EF9C117F8AB5B00B5445F /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		945EF9C217F8AB5B00B5445F /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				945EF9C317F8AB5B00B5445F /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		945EF9C417F8AB5B00B5445F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				945EF9C517F8AB5B00B5445F /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -415,13 +525,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YoshiScream/YoshiScream-Prefix.pch";
 				INFOPLIST_FILE = "YoshiScream/YoshiScream-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Yoshida/Developer/YoshiScream/YoshiScream,
+					/Users/Yoshida/Developer/YoshiScream/YoshiScream/YoshiScream/Frameworks,
+					/Users/Yoshida/Developer/YoshiScream/YoshiScream/YoshiScream/ATTSpeechKit,
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -432,13 +546,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YoshiScream/YoshiScream-Prefix.pch";
 				INFOPLIST_FILE = "YoshiScream/YoshiScream-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Yoshida/Developer/YoshiScream/YoshiScream,
+					/Users/Yoshida/Developer/YoshiScream/YoshiScream/YoshiScream/Frameworks,
+					/Users/Yoshida/Developer/YoshiScream/YoshiScream/YoshiScream/ATTSpeechKit,
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
