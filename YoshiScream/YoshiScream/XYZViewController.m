@@ -7,6 +7,11 @@
 //
 
 #import "XYZViewController.h"
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
+
+
+#define METERS_PER_MILE 1609.344
 
 @interface XYZViewController ()
 
@@ -24,6 +29,19 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+        // 1
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = 36.001551;
+    zoomLocation.longitude= -78.939573;
+    
+        // 2
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+    
+        // 3
+    [_mapView setRegion:viewRegion animated:YES];
 }
 
 @end
